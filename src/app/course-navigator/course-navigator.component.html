@@ -9,16 +9,38 @@
           <div class="col-3">
               <ul>
                   <li class="list-group-item active">Courses</li>
-                  <li *ngFor="let course of courses" class="list-group-item">
+                  <li *ngFor="let course of courses" class="list-group-item"
+                      (click)="selectCourse(course.id)">
                       {{course.title}}
-                      <button class="btn btn-primary float-right"
-                      (click)="viewCourse(course.id)">View</button>
                   </li>
               </ul>
           </div>
-          <div class="col-3">modules</div>
-          <div class="col-3">lessons</div>
-          <div class="col-3">widgets</div>
+          <div class="col-3">
+              <ul>
+                  <li class="list-group-item active">Modules</li>
+                  <li *ngFor="let module of modules" class="list-group-item"
+                      (click)="selectModule(module.id)">
+                      {{module.title}}
+                  </li>
+              </ul>
+          </div>
+          <div class="col-3">
+              <ul>
+                  <li class="list-group-item active">Lessons</li>
+                  <li *ngFor="let lesson of lessons" class="list-group-item"
+                      (click)="selectLesson(lesson.id)">
+                      {{lesson.title}}
+                  </li>
+              </ul>
+          </div>
+          <div class="col-3">
+            <ul>
+                <li class="list-group-item active">Widgets</li>
+                <li *ngFor="let widget of widgets" class="list-group-item">
+                    {{widget.name}}
+                </li>
+            </ul>
+          </div>
         </div>
        
       </div>
