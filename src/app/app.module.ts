@@ -14,6 +14,8 @@ import { CourseServiceClient } from './services/course.service.client';
 // import { WidgetServiceClient } from './services/widget.service.client';
 // import { ModuleServiceClient } from './services/module.service.client';
 
+import { routing } from './app.routing'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +25,8 @@ import { CourseServiceClient } from './services/course.service.client';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    routing
   ],
   providers: [
     CourseNavigatorServiceClient,
