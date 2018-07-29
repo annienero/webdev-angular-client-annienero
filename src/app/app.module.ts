@@ -10,9 +10,9 @@ import { CourseNavigatorComponent } from './course-navigator/course-navigator.co
 import { CourseManagerComponent } from './course-manager/course-manager.component';
 import { CourseGridComponent } from './course-grid/course-grid.component'
 import { CourseServiceClient } from './services/course.service.client';
-import { LessonServiceClient } from './services/lesson.service.client';
-import { WidgetServiceClient } from './services/widget.service.client';
-import { ModuleServiceClient } from './services/module.service.client';
+// import { LessonServiceClient } from './services/lesson.service.client';
+// import { WidgetServiceClient } from './services/widget.service.client';
+// import { ModuleServiceClient } from './services/module.service.client';
 
 @NgModule({
   declarations: [
@@ -27,10 +27,10 @@ import { ModuleServiceClient } from './services/module.service.client';
   ],
   providers: [
     CourseNavigatorServiceClient,
-    CourseServiceClient,
-    LessonServiceClient,
-    ModuleServiceClient,
-    WidgetServiceClient
+    CourseServiceClient
+    // LessonServiceClient,
+    // ModuleServiceClient,
+    // WidgetServiceClient
   ],
   bootstrap: [AppComponent]
 })
