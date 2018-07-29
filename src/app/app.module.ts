@@ -7,20 +7,30 @@ import { FormsModule } from "@angular/forms";
 
 import { CourseNavigatorServiceClient } from "./services/course-navigator.service.client";
 import { CourseNavigatorComponent } from './course-navigator/course-navigator.component';
-import { CourseManagerComponent } from './course-manager/course-manager.component'
+import { CourseManagerComponent } from './course-manager/course-manager.component';
+import { CourseGridComponent } from './course-grid/course-grid.component'
+import { CourseServiceClient } from './services/course.service.client';
+import { LessonServiceClient } from './services/lesson.service.client';
+import { WidgetServiceClient } from './services/widget.service.client';
+import { ModuleServiceClient } from './services/module.service.client';
 
 @NgModule({
   declarations: [
     AppComponent,
     CourseNavigatorComponent,
-    CourseManagerComponent
+    CourseManagerComponent,
+    CourseGridComponent
   ],
   imports: [
     BrowserModule,
     FormsModule
   ],
   providers: [
-    CourseNavigatorServiceClient
+    CourseNavigatorServiceClient,
+    CourseServiceClient,
+    LessonServiceClient,
+    ModuleServiceClient,
+    WidgetServiceClient
   ],
   bootstrap: [AppComponent]
 })
