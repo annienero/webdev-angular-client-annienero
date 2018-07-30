@@ -15,10 +15,15 @@ export class ModuleListComponent implements OnInit {
   }
   modules: Module[] = []
   courseId
+  selectedModuleId
   loadModules(courseId) {
     this.courseId = courseId
     this.service.findAllModulesForCourse(courseId)
       .then(modules => this.modules = modules)
+  }
+
+  selectModule(moduleId) {
+    this.selectedModuleId = moduleId
   }
 
   ngOnInit() {

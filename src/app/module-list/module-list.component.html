@@ -3,13 +3,21 @@
         <link rel="stylesheet" href="assets/dist/css/bootstrap.css" />
     </head>
     <body>
-      <ul class="list-group">
-        <li class="list-group-item active">Modules</li>
-        <li *ngFor="let module of modules" class="list-group-item webdev"
-                      [ngClass]="{'active': module.id === selectedModuleId}"
-                      (click)="selectModule(module.id)">
-                      {{module.title}}
-                  </li>
-      </ul>
+      <div class="row">
+        <div class="col-4">
+            <ul class="list-group">
+                <li class="list-group-item active">Modules</li>
+                <li *ngFor="let module of modules" class="list-group-item webdev"
+                              [ngClass]="{'active': module.id === selectedModuleId}"
+                              (click)="selectModule(module.id)">
+                              {{module.title}}
+                          </li>
+              </ul>
+        </div>
+        <div class="col-8">
+          <app-lesson-tabs></app-lesson-tabs>
+        </div>
+      </div>
+      
     </body>
 </html>
