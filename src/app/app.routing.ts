@@ -6,6 +6,7 @@ const appRoutes: Routes = [
     {path: '', redirectTo: 'home', pathMatch: 'full'},
     {path: 'home', component: CourseManagerComponent},
     {path: 'course/:courseId', component: CourseViewerComponent},
+    {path: 'course/:courseId/module/:moduleId', component: CourseViewerComponent},
     {path: '**', component: CourseManagerComponent}
 ]
 

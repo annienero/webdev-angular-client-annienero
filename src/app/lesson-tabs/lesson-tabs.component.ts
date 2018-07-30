@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '../../../node_modules/@angular/router';
 
 @Component({
   selector: 'app-lesson-tabs',
@@ -7,7 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LessonTabsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) {
+    this.route.params.subscribe(params => this.loadLessons(params.moduleId))
+   }
+
+  moduleId
+  loadLessons(moduleId) {
+    this.moduleId = moduleId
+  }
 
   ngOnInit() {
   }
