@@ -12,7 +12,7 @@ import { CourseGridComponent } from './course-grid/course-grid.component'
 import { CourseServiceClient } from './services/course.service.client';
 import { LessonServiceClient } from './services/lesson.service.client';
 // import { WidgetServiceClient } from './services/widget.service.client';
- import { ModuleServiceClient } from './services/module.service.client';
+import { ModuleServiceClient } from './services/module.service.client';
 
 import { routing } from './app.routing';
 import { CourseViewerComponent } from './course-viewer/course-viewer.component';

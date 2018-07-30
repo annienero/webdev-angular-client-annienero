@@ -4,12 +4,9 @@
     </head>
     <body>
       <ul class="nav nav-tabs">
-        <li class="nav-item">
-          <a class="nav-link active" href="#">Lesson 1</a>
+        <li *ngFor="let lesson of lessons" class="nav-item">
+          <a class="nav-link">{{lesson.title}}</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Lesson 2</a>
-          </li>
       </ul>
     </body>
 </html>
