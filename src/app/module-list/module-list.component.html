@@ -8,11 +8,11 @@
             <ul class="list-group">
                 <li class="list-group-item active">Modules</li>
                 <li *ngFor="let module of modules" class="list-group-item webdev"
-                              [ngClass]="{'active': module.id == selectedModuleId}">
-                              <a routerLink="/course/{{courseId}}/module/{{module.id}}"
-                                >{{module.title}}</a>
-                          </li>
-              </ul>
+                  [ngClass]="{'active': module.id == selectedModuleId}">
+                  <a routerLink="/course/{{courseId}}/module/{{module.id}}"
+                    >{{module.title}}</a>
+                </li>
+            </ul>
         </div>
         <div class="col-8">
           <app-lesson-tabs></app-lesson-tabs>
