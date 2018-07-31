@@ -40,8 +40,8 @@ import { WidgetListComponent } from './widget-list/widget-list.component'
     CourseNavigatorServiceClient,
     CourseServiceClient,
     LessonServiceClient,
-     ModuleServiceClient,
-     WidgetServiceClient
+    ModuleServiceClient,
+    WidgetServiceClient
   ],
   bootstrap: [AppComponent]
 })
