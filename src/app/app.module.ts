@@ -18,7 +18,8 @@ import { routing } from './app.routing';
 import { CourseViewerComponent } from './course-viewer/course-viewer.component';
 import { ModuleListComponent } from './module-list/module-list.component';
 import { LessonTabsComponent } from './lesson-tabs/lesson-tabs.component';
-import { WidgetListComponent } from './widget-list/widget-list.component'
+import { WidgetListComponent } from './widget-list/widget-list.component';
+import { LoginComponent } from './login/login.component'
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { WidgetListComponent } from './widget-list/widget-list.component'
     CourseViewerComponent,
     ModuleListComponent,
     LessonTabsComponent,
-    WidgetListComponent
+    WidgetListComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
