@@ -5,6 +5,8 @@ import { CourseViewerComponent } from './course-viewer/course-viewer.component';
 const appRoutes: Routes = [
     {path: '', redirectTo: 'home', pathMatch: 'full'},
     {path: 'home', component: CourseManagerComponent},
+    {path: 'login', component: CourseManagerComponent},
+    {path: 'register', component: CourseManagerComponent},
     {path: 'course/:courseId', component: CourseViewerComponent},
     {path: 'course/:courseId/module/:moduleId', component: CourseViewerComponent},
     {path: 'course/:courseId/module/:moduleId/lesson/:lessonId', component: CourseViewerComponent},
