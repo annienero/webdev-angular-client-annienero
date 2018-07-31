@@ -9,21 +9,21 @@ import { ModuleServiceClient } from '../services/module.service.client';
   styleUrls: ['./module-list.component.css']
 })
 export class ModuleListComponent implements OnInit {
-
-  constructor(private service: ModuleServiceClient, private route: ActivatedRoute) {
-    this.route.params.subscribe(params => this.loadModules(params.courseId))
-  }
   modules: Module[] = []
   courseId
   selectedModuleId
+
+  constructor(private service: ModuleServiceClient, private route: ActivatedRoute) {
+    this.route.params.subscribe(params => {
+      this.selectedModuleId = params.moduleId
+      this.loadModules(params.courseId)
+    })
+  }
+
   loadModules(courseId) {
     this.courseId = courseId
     this.service.findAllModulesForCourse(courseId)
       .then(modules => this.modules = modules)
-  }
-
-  selectModule(moduleId) {
-    this.selectedModuleId = moduleId
   }
 
   ngOnInit() {

@@ -7,6 +7,7 @@ const appRoutes: Routes = [
     {path: 'home', component: CourseManagerComponent},
     {path: 'course/:courseId', component: CourseViewerComponent},
     {path: 'course/:courseId/module/:moduleId', component: CourseViewerComponent},
+    {path: 'lesson/:lessonId', component: CourseViewerComponent},
     {path: '**', component: CourseManagerComponent}
 ]
 

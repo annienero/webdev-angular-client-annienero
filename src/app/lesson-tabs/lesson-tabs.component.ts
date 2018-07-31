@@ -11,15 +11,23 @@ import { Lesson } from '../models/lesson.model.client'
 export class LessonTabsComponent implements OnInit {
 
   constructor(private service: LessonServiceClient, private route: ActivatedRoute) {
-    this.route.params.subscribe(params => this.loadLessons(params.moduleId))
+    this.route.params.subscribe(params => this.setParams(params))
    }
 
+  courseId
   moduleId
+  lesosnId
   lessons: Lesson[] = []
-  loadLessons(moduleId) {
-    this.moduleId = moduleId
-    this.service.findAllLessonsForModule(moduleId)
+  loadLessons() {
+    this.service.findAllLessonsForModule(this.moduleId)
       .then(lessons => this.lessons = lessons)
+  }
+
+  setParams(params) {
+    this.moduleId = params.moduleId
+    this.lesosnId = params.lesosnId
+    this.courseId = params.courseId
+    this.loadLessons()
   }
 
   ngOnInit() {
