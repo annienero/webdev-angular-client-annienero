@@ -11,13 +11,14 @@ import { CourseManagerComponent } from './course-manager/course-manager.componen
 import { CourseGridComponent } from './course-grid/course-grid.component'
 import { CourseServiceClient } from './services/course.service.client';
 import { LessonServiceClient } from './services/lesson.service.client';
-// import { WidgetServiceClient } from './services/widget.service.client';
+import { WidgetServiceClient } from './services/widget.service.client';
 import { ModuleServiceClient } from './services/module.service.client';
 
 import { routing } from './app.routing';
 import { CourseViewerComponent } from './course-viewer/course-viewer.component';
 import { ModuleListComponent } from './module-list/module-list.component';
-import { LessonTabsComponent } from './lesson-tabs/lesson-tabs.component'
+import { LessonTabsComponent } from './lesson-tabs/lesson-tabs.component';
+import { WidgetListComponent } from './widget-list/widget-list.component'
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { LessonTabsComponent } from './lesson-tabs/lesson-tabs.component'
     CourseGridComponent,
     CourseViewerComponent,
     ModuleListComponent,
-    LessonTabsComponent
+    LessonTabsComponent,
+    WidgetListComponent
   ],
   imports: [
     BrowserModule,
@@ -38,8 +40,8 @@ import { LessonTabsComponent } from './lesson-tabs/lesson-tabs.component'
     CourseNavigatorServiceClient,
     CourseServiceClient,
     LessonServiceClient,
-     ModuleServiceClient
-    // WidgetServiceClient
+     ModuleServiceClient,
+     WidgetServiceClient
   ],
   bootstrap: [AppComponent]
 })
