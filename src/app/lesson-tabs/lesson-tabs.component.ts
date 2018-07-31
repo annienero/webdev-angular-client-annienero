@@ -9,15 +9,15 @@ import { Lesson } from '../models/lesson.model.client'
   styleUrls: ['./lesson-tabs.component.css']
 })
 export class LessonTabsComponent implements OnInit {
+  courseId
+  moduleId
+  lessonId
+  lessons: Lesson[] = []
 
   constructor(private service: LessonServiceClient, private route: ActivatedRoute) {
     this.route.params.subscribe(params => this.setParams(params))
    }
 
-  courseId
-  moduleId
-  lesosnId
-  lessons: Lesson[] = []
   loadLessons() {
     this.service.findAllLessonsForModule(this.moduleId)
       .then(lessons => this.lessons = lessons)
@@ -25,7 +25,7 @@ export class LessonTabsComponent implements OnInit {
 
   setParams(params) {
     this.moduleId = params.moduleId
-    this.lesosnId = params.lesosnId
+    this.lessonId = params.lessonId
     this.courseId = params.courseId
     this.loadLessons()
   }
