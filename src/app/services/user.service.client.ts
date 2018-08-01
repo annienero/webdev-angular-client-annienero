@@ -1,3 +1,4 @@
+//TODO singleton
 
 export class UserServiceClient {
 
@@ -31,6 +32,11 @@ export class UserServiceClient {
 
     profile() {
         return fetch('http://localhost:3000/api/profile') //TODO local
+        .then(response => response.json())
+    }
+
+    findUserById(userId) {
+        return fetch('http://localhost:3000/api/user/' + userId) //TODO local
         .then(response => response.json())
     }
 }
