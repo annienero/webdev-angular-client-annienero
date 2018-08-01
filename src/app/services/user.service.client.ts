@@ -1,8 +1,4 @@
-import {Injectable} from '@angular/core';
 
-//TODO singleton
-
-@Injectable()
 export class UserServiceClient {
 
     login(username, password) {
@@ -31,5 +27,10 @@ export class UserServiceClient {
                 'content-type': 'application/json'
             }
         }) 
+    }
+
+    profile() {
+        return fetch('http://localhost:3000/api/profile') //TODO local
+        .then(response => response.json())
     }
 }
