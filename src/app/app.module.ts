@@ -23,6 +23,7 @@ import { WidgetListComponent } from './widget-list/widget-list.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component'
 import { HttpModule } from '@angular/http';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { HttpModule } from '@angular/http';
     LessonTabsComponent,
     WidgetListComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

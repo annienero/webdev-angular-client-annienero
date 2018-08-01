@@ -29,7 +29,7 @@ export class RegisterComponent implements OnInit {
       return
     }
     this.service.createUser(username, password)
-      .then((()=> this.router.navigate(['home']))) //TODO eventually go to profile
+      .then((()=> this.router.navigate(['profile'])))
   }
 
   ngOnInit() {

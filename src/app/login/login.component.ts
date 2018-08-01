@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
       return
     }
     this.service.login(username, password)
-    .then(() => this.router.navigate(['home']))//, alert('Invalid Credentials')) //TODO eventually go to profile
+    .then(() => this.router.navigate(['profile']))
   }
 
   ngOnInit() {
