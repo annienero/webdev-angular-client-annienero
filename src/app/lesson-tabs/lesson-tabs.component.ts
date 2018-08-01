@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '../../../node_modules/@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { LessonServiceClient } from '../services/lesson.service.client';
 import { Lesson } from '../models/lesson.model.client'
 

@@ -13,6 +13,7 @@ import { CourseServiceClient } from './services/course.service.client';
 import { LessonServiceClient } from './services/lesson.service.client';
 import { WidgetServiceClient } from './services/widget.service.client';
 import { ModuleServiceClient } from './services/module.service.client';
+import { UserServiceClient } from './services/user.service.client';
 
 import { routing } from './app.routing';
 import { CourseViewerComponent } from './course-viewer/course-viewer.component';
@@ -21,6 +22,7 @@ import { LessonTabsComponent } from './lesson-tabs/lesson-tabs.component';
 import { WidgetListComponent } from './widget-list/widget-list.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component'
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -38,6 +40,7 @@ import { RegisterComponent } from './register/register.component'
   imports: [
     BrowserModule,
     FormsModule,
+    HttpModule,
     routing
   ],
   providers: [
@@ -45,7 +48,8 @@ import { RegisterComponent } from './register/register.component'
     CourseServiceClient,
     LessonServiceClient,
     ModuleServiceClient,
-    WidgetServiceClient
+    WidgetServiceClient,
+    UserServiceClient
   ],
   bootstrap: [AppComponent]
 })
