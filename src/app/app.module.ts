@@ -5,8 +5,6 @@ import { AppComponent } from './app.component';
 
 import { FormsModule } from "@angular/forms";
 
-import { CourseNavigatorServiceClient } from "./services/course-navigator.service.client";
-import { CourseNavigatorComponent } from './course-navigator/course-navigator.component';
 import { CourseManagerComponent } from './course-manager/course-manager.component';
 import { CourseGridComponent } from './course-grid/course-grid.component'
 import { CourseServiceClient } from './services/course.service.client';
@@ -28,7 +26,6 @@ import { ProfileComponent } from './profile/profile.component';
 @NgModule({
   declarations: [
     AppComponent,
-    CourseNavigatorComponent,
     CourseManagerComponent,
     CourseGridComponent,
     CourseViewerComponent,
@@ -46,7 +43,6 @@ import { ProfileComponent } from './profile/profile.component';
     routing
   ],
   providers: [
-    CourseNavigatorServiceClient,
     CourseServiceClient,
     LessonServiceClient,
     ModuleServiceClient,
