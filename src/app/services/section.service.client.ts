@@ -23,4 +23,11 @@ export class SectionServiceClient {
         return fetch('http://localhost:3000/api/course/' + courseId + '/section')
         .then(response => response.json())
     }
+
+    deleteSection(sectionId) {
+        return fetch('http://localhost:3000/api/section/' + sectionId, {
+            method: 'delete'
+        })
+        .then(response => response.json())
+    }
 }

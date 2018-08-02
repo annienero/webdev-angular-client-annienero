@@ -34,6 +34,16 @@ export class SectionAdminComponent implements OnInit {
     this.sectionService.createSection(this.course.id, this.sectionName, this.seats)
   }
 
+  deleteSection(sectionId) {
+    this.sectionService.deleteSection(sectionId)
+      .then(response => this.sectionService.findAllSectionsForCourse(this.course.id)
+      .then(sections => this.sections = sections))
+  }
+
+  editSection(sectionId) {
+
+  }
+
   ngOnInit() {
   }
 
