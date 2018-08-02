@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core'
-import { CourseServiceClient } from '../services/course.service.client'
+import { SectionServiceClient } from '../services/section.service.client'
 import { ActivatedRoute } from '../../../node_modules/@angular/router'
 import { Course } from '../models/course.model.client'
 
@@ -10,7 +10,7 @@ import { Course } from '../models/course.model.client'
 })
 export class SectionAdminComponent implements OnInit {
 
-  constructor(private service: CourseServiceClient, private route: ActivatedRoute) {
+  constructor(private service: SectionServiceClient, private route: ActivatedRoute) {
     this.route.params.subscribe(params => this.loadSections(params.courseId))
   }
 
@@ -24,7 +24,7 @@ export class SectionAdminComponent implements OnInit {
   }
 
   createSection() {
-
+    this.service.createSection(this.sectionName, this.seats)
   }
 
   ngOnInit() {
