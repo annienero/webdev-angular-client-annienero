@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core'
 import { ActivatedRoute } from '../../../node_modules/@angular/router'
 import { Course } from '../models/course.model.client'
+import { Section } from '../models/section.model.client'
 import { SectionServiceClient } from '../services/section.service.client';
 import { CourseServiceClient } from '../services/course.service.client';
 
@@ -20,10 +21,13 @@ export class SectionAdminComponent implements OnInit {
   course: Course = new Course()
   sectionName: string
   seats: number
+  sections: Section[] = []
 
   loadSections(courseId) {
      this.courseService.findCourseById(courseId)
        .then(course => this.course = course)
+      this.sectionService.findAllSectionsForCourse(courseId)
+        .then(sections => this.sections = sections)
   }
 
   createSection() {

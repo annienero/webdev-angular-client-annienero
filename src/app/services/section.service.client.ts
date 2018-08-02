@@ -18,4 +18,9 @@ export class SectionServiceClient {
             }
         }).then(response => response.json())
     }
+
+    findAllSectionsForCourse(courseId) {
+        return fetch('http://localhost:3000/api/course/' + courseId + '/section')
+        .then(response => response.json())
+    }
 }
