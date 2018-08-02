@@ -22,6 +22,8 @@ export class SectionAdminComponent implements OnInit {
   sectionName: string
   seats: number
   sections: Section[] = []
+  currentSectionId
+  editing = false
 
   loadSections(courseId) {
      this.courseService.findCourseById(courseId)
@@ -37,11 +39,32 @@ export class SectionAdminComponent implements OnInit {
   deleteSection(sectionId) {
     this.sectionService.deleteSection(sectionId)
       .then(response => this.sectionService.findAllSectionsForCourse(this.course.id)
-      .then(sections => this.sections = sections))
+        .then(sections => this.sections = sections))
   }
 
   editSection(sectionId) {
+    this.editing = true
+    this.sectionService.findSectionById(sectionId)
+    .then(section => {
+      this.currentSectionId = section._id
+      this.sectionName = section.sectionName
+      this.seats = section.seats
+    })
+  }
 
+  updateSection() {
+    const sectionObj = {
+      sectionName: this.sectionName,
+      seats: this.seats,
+      courseId: this.course.id
+    }
+    this.sectionService.updateSection(this.currentSectionId, sectionObj)
+    .then(response => this.sectionService.findAllSectionsForCourse(this.course.id)
+      .then(sections => {
+        this.sections = sections
+        this.sectionName = ''
+        this.seats = null
+      }))
   }
 
   ngOnInit() {

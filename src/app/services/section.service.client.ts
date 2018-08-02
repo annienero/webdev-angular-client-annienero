@@ -30,4 +30,20 @@ export class SectionServiceClient {
         })
         .then(response => response.json())
     }
+
+    findSectionById(sectionId) {
+        return fetch('http://localhost:3000/api/section/' + sectionId)
+        .then(response => response.json())
+    }
+
+    updateSection(sectionId, section) {
+        return fetch('http://localhost:3000/api/section/' + sectionId, {
+            body: JSON.stringify(section),
+            method: 'put',
+            headers: {
+                'content-type': 'application/json'
+            }
+        })
+        .then(response => response.json())
+    }
 }

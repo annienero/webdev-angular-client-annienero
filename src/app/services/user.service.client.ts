@@ -56,7 +56,7 @@ export class UserServiceClient {
 
     updateUser(user) {
         return fetch('http://localhost:3000/api/profile', {
-            method: 'post',
+            method: 'put',
             credentials: 'include',
             body: JSON.stringify(user),
             headers: {
