@@ -29,7 +29,8 @@ export class RegisterComponent implements OnInit {
       return
     }
     this.service.createUser(username, password)
-      .then((()=> this.router.navigate(['profile'])))
+      .then(()=> this.router.navigate(['profile']),
+      () => alert('Username already taken'))
   }
 
   ngOnInit() {

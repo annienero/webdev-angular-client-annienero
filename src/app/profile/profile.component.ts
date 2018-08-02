@@ -15,5 +15,4 @@ export class ProfileComponent implements OnInit {
     this.service.profile()
     .then(user => this.user = user)
   }
-
 }
