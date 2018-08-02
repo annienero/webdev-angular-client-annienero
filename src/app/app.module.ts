@@ -23,6 +23,7 @@ import { RegisterComponent } from './register/register.component'
 import { HttpModule } from '@angular/http';
 import { ProfileComponent } from './profile/profile.component';
 import { SectionListComponent } from './section-list/section-list.component';
+import { SectionAdminComponent } from './section-admin/section-admin.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { SectionListComponent } from './section-list/section-list.component';
     LoginComponent,
     RegisterComponent,
     ProfileComponent,
-    SectionListComponent
+    SectionListComponent,
+    SectionAdminComponent
   ],
   imports: [
     BrowserModule,
