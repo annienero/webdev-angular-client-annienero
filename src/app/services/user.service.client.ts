@@ -45,4 +45,23 @@ export class UserServiceClient {
         return fetch('http://localhost:3000/api/user/' + userId) //TODO local
         .then(response => response.json())
     }
+
+    logout() {
+        return fetch('http://localhost:3000/api/logout', {
+            method: 'post',
+            credentials: 'include'
+        }) //TODO local
+    }
+
+    updateUser(user) {
+        return fetch('http://localhost:3000/api/profile', {
+            method: 'post',
+            credentials: 'include',
+            body: JSON.stringify(user),
+            headers: {
+                'content-type': 'application/json'
+            }
+        }) //TODO local
+        .then(response => response.json())
+    }
 }
