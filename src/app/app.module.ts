@@ -24,6 +24,7 @@ import { HttpModule } from '@angular/http';
 import { ProfileComponent } from './profile/profile.component';
 import { SectionListComponent } from './section-list/section-list.component';
 import { SectionAdminComponent } from './section-admin/section-admin.component';
+import { SectionServiceClient } from './services/section.service.client';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { SectionAdminComponent } from './section-admin/section-admin.component';
     LessonServiceClient,
     ModuleServiceClient,
     WidgetServiceClient,
-    UserServiceClient
+    UserServiceClient,
+    SectionServiceClient
   ],
   bootstrap: [AppComponent]
 })
