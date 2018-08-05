@@ -20,8 +20,10 @@ export class SectionListComponent implements OnInit {
 
   course: Course = new Course()
   sections: Section[] = []
+  courseId
 
   loadSections(courseId) {
+    this.courseId = courseId
     this.courseService.findCourseById(courseId)
       .then(course => this.course = course)
      this.sectionService.findAllSectionsForCourse(courseId)
@@ -29,7 +31,9 @@ export class SectionListComponent implements OnInit {
   }
 
   enroll(sectionId) {
-    alert(sectionId)
+    this.sectionService.enrollStudentInSection(sectionId)
+    this.sectionService.findAllSectionsForCourse(this.courseId)
+       .then(sections => this.sections = sections)
   }
 
   ngOnInit() {
