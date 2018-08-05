@@ -51,6 +51,20 @@ export class SectionServiceClient {
         return fetch('http://localhost:3000/api/section/' + sectionId, {
             method: 'post',
             credentials: 'include'
-        })
+        }).then(response => response.json())
+    }
+
+    findSectionsForStudent() {
+        return fetch('http://localhost:3000/api/section', {
+            method: 'get',
+            credentials: 'include'
+        }).then(response => response.json())
+    }
+
+    dropCourse(sectionId, enrollId) {
+        return fetch('http://localhost:3000/api/section/' + sectionId + '/drop/' + enrollId, {
+            method: 'delete',
+            credentials: 'include'
+        }).then(response => response.json())
     }
 }

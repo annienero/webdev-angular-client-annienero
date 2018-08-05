@@ -42,5 +42,16 @@
                             <button (click)="logout()" id="logoutBtn" class="btn btn-primary btn-block">Logout</button>
                         </div>
                 </div>
+                <div>
+                    <a routerLink="/admin" ng-show="user.role == admin">Admin Page</a>
+                    <h3>Your Sections</h3>
+                    <ul class="list-group">
+                        <li *ngFor="let enrollment of enrollments" class="list-group-item">
+                            {{enrollment.sectionId.sectionName}}
+                            <button (click)="dropCourse(enrollment.sectionId._id, enrollment._id)"
+                             class="btn btn-primary float-right">Drop</button>
+                        </li>
+                    </ul>
+                </div>
         </div>
     </body>
