@@ -10,7 +10,7 @@ export class SectionServiceClient {
             seats: seats,
             courseId: courseId
         }
-        fetch('http://localhost:3000/api/course/' + courseId + '/section', { //TODO local
+        return fetch('http://localhost:3000/api/course/' + courseId + '/section', { //TODO local
             body: JSON.stringify(sectionObj),
             method: 'post',
             headers: {

@@ -1,3 +1,42 @@
-<p>
-  admin-page works!
-</p>
+<html>
+    <head>
+        <link rel="stylesheet" href="assets/dist/css/bootstrap.css" />
+    </head>
+    <body>
+        <div class="container-fluid">
+            <h1>Course Navigator</h1>
+            <div class="float-right">
+                <a routerLink="/profile">Profile</a>
+                <div><a routerLink="/home">Home</a></div>
+            </div>
+            <div class="row">
+              <div class="col-4">
+                <ul>
+                  <li class="list-group-item active">Courses</li>
+                  <li *ngFor="let course of courses" class="list-group-item webdev" [ngClass]="{'active': course.id === selectedCourseId}"
+                    (click)="selectCourse(course.id)">
+                    {{course.title}}
+                  </li>
+                </ul>
+              </div>
+              <div class="col-7">
+                <h2>Sections</h2>
+                <label for="name">Section Name</label>
+                <input id="name" [(ngModel)]="sectionName" placeholder="Section Name" class="form-control" />
+                <label for="seats">Seats Available</label>
+                <input id="seats" [(ngModel)]="seats" placeholder="Seats Available" class="form-control" />
+                <button (click)="createSection()" ng-hide="editing" class="btn btn-primary">Add Section</button>
+                <button (click)="updateSection()" ng-show="editing" class="btn btn-primary">Update Section</button>
+                <ul class="list-group">
+                  <li *ngFor="let section of sections" class="list-group-item">
+                    <div>{{section.sectionName}}</div> Seats: {{section.seats}}
+                    <button (click)="editSection(section._id)" class="btn btn-primary float-right">Edit</button>
+                    <button (click)="deleteSection(section._id)" class="btn btn-primary float-right">Delete</button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+    </body>
+</html>
+<html>

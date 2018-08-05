@@ -4,19 +4,6 @@
     </head>
     <body>
         <a routerLink="/home">Back</a>
-      <h2>Sections for {{course.title}}</h2>
-      <label for="name">Section Name</label>
-      <input id="name" [(ngModel)]="sectionName" placeholder="Section Name" class="form-control"/>
-      <label for="seats">Seats Available</label>
-      <input id="seats" [(ngModel)]="seats" placeholder="Seats Available" class="form-control"/>
-      <button (click)="createSection()" ng-hide="editing" class="btn btn-primary">Add Section</button>
-      <button (click)="updateSection()" ng-show="editing" class="btn btn-primary">Update Section</button>
-      <ul class="list-group">
-        <li *ngFor="let section of sections" class="list-group-item" >
-          <div>{{section.sectionName}}</div> Seats: {{section.seats}}
-          <button (click)="editSection(section._id)" class="btn btn-primary float-right">Edit</button>
-          <button (click)="deleteSection(section._id)" class="btn btn-primary float-right">Delete</button>
-        </li>
-      </ul>
+      
     </body>
 </html>
