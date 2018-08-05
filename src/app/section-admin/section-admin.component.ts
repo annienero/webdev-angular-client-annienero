@@ -27,7 +27,10 @@ export class SectionAdminComponent implements OnInit {
 
   loadSections(courseId) {
      this.courseService.findCourseById(courseId)
-       .then(course => this.course = course)
+       .then(course => {
+         this.course = course
+         this.sectionName = course.name + ' 1'
+        })
       this.sectionService.findAllSectionsForCourse(courseId)
         .then(sections => this.sections = sections)
   }
@@ -38,7 +41,7 @@ export class SectionAdminComponent implements OnInit {
 
   deleteSection(sectionId) {
     this.sectionService.deleteSection(sectionId)
-      .then(response => this.sectionService.findAllSectionsForCourse(this.course.id)
+      .then(() => this.sectionService.findAllSectionsForCourse(this.course.id)
         .then(sections => this.sections = sections))
   }
 
