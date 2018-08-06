@@ -4,11 +4,9 @@
     </head>
     <body>
         <div class="container-fluid">
+            <a routerLink="/profile">Profile</a>
+            <div><a routerLink="/home">Home</a></div>
             <h1>Course Navigator</h1>
-            <div class="float-right">
-                <a routerLink="/profile">Profile</a>
-                <div><a routerLink="/home">Home</a></div>
-            </div>
             <div class="row">
               <div class="col-4">
                 <ul>
@@ -19,7 +17,7 @@
                   </li>
                 </ul>
               </div>
-              <div class="col-7">
+              <div *ngIf="selectedCourseId" class="col-7">
                 <h2>Sections</h2>
                 <label for="name">Section Name</label>
                 <input id="name" [(ngModel)]="sectionName" placeholder="Section Name" class="form-control" />
