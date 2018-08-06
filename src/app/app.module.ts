@@ -27,6 +27,7 @@ import { SectionAdminComponent } from './section-admin/section-admin.component';
 import { SectionServiceClient } from './services/section.service.client';
 import { AdminPageComponent } from './admin-page/admin-page.component';
 import { QuizListComponent } from './quiz-list/quiz-list.component';
+import { QuizTakerComponent } from './quiz-taker/quiz-taker.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { QuizListComponent } from './quiz-list/quiz-list.component';
     SectionListComponent,
     SectionAdminComponent,
     AdminPageComponent,
-    QuizListComponent
+    QuizListComponent,
+    QuizTakerComponent
   ],
   imports: [
     BrowserModule,
