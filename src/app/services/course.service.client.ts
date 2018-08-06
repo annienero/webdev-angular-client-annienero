@@ -5,12 +5,12 @@ import { Injectable } from '@angular/core';
 })
 export class CourseServiceClient {
     findAllCourses() {
-        return fetch("http://localhost:8080/api/course")
+        return fetch("https://cs4550-summer2-2018-annienero.herokuapp.com/api/course")
             .then(response => response.json())
     }
 
     findCourseById(courseId) {
-        return fetch("http://localhost:8080/api/course/" + courseId)
+        return fetch("https://cs4550-summer2-2018-annienero.herokuapp.com/api/course/" + courseId)
         .then(response => response.json())
     }
 }

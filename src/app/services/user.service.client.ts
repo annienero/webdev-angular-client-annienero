@@ -10,7 +10,7 @@ export class UserServiceClient {
             username: username,
             password: password
         }
-        return fetch('http://localhost:3000/api/login', { //TODO local
+        return fetch('https://webdev-server-node-nero.herokuapp.com/api/login', {
             body: JSON.stringify(userObj),
             credentials: 'include',
             method: 'post',
@@ -25,7 +25,7 @@ export class UserServiceClient {
             username: username,
             password: password
         }
-        return fetch('http://localhost:3000/api/user', { //TODO local
+        return fetch('https://webdev-server-node-nero.herokuapp.com/api/user', { 
             body: JSON.stringify(userObj),
             method: 'post',
             credentials: 'include',
@@ -36,33 +36,33 @@ export class UserServiceClient {
     }
 
     profile() {
-        return fetch('http://localhost:3000/api/profile', {
+        return fetch('https://webdev-server-node-nero.herokuapp.com/api/profile', {
             credentials: 'include',
-        }) //TODO local
+        }) 
         .then(response => response.json())
     }
 
     findUserById(userId) {
-        return fetch('http://localhost:3000/api/user/' + userId) //TODO local
+        return fetch('https://webdev-server-node-nero.herokuapp.com/api/user/' + userId)
         .then(response => response.json())
     }
 
     logout() {
-        return fetch('http://localhost:3000/api/logout', {
+        return fetch('https://webdev-server-node-nero.herokuapp.com/api/logout', {
             method: 'post',
             credentials: 'include'
-        }) //TODO local
+        }) 
     }
 
     updateUser(user) {
-        return fetch('http://localhost:3000/api/profile', {
+        return fetch('https://webdev-server-node-nero.herokuapp.com/api/profile', {
             method: 'put',
             credentials: 'include',
             body: JSON.stringify(user),
             headers: {
                 'content-type': 'application/json'
             }
-        }) //TODO local
+        })
         .then(response => response.json())
     }
 }
