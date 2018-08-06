@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '../../../node_modules/@angular/router'
 import { Course } from '../models/course.model.client'
 import { SectionServiceClient } from '../services/section.service.client';
 import { Section } from '../models/section.model.client';
+import { UserServiceClient } from '../services/user.service.client';
 
 @Component({
   selector: 'app-section-list',
@@ -14,11 +15,13 @@ export class SectionListComponent implements OnInit {
 
   constructor(private sectionService: SectionServiceClient, 
       private courseService: CourseServiceClient,
+      private userService: UserServiceClient,
       private router: Router,
       private route: ActivatedRoute) {
     this.route.params.subscribe(params => this.loadSections(params.courseId))
   }
 
+  user = false
   course: Course = new Course()
   sections: Section[] = []
   courseId
@@ -37,6 +40,8 @@ export class SectionListComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.userService.profile()
+      .then(() => { this.user = true })
   }
 
 }
