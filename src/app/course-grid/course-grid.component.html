@@ -6,6 +6,7 @@
         <div><a *ngIf="!user" routerLink="/login">Login</a></div>
         <div><a *ngIf="!user" routerLink="/register">Register</a></div>
         <div><a *ngIf="user" routerLink="/profile">Profile</a></div>
+        <div><a *ngIf="user" routerLink="/quizes">Quizes</a></div>
         <ul *ngIf="sections.length > 0" class="list-group">
             <h2>Your Sections</h2>
             <li *ngFor="let section of sections" class="list-group-item" >
