@@ -25,7 +25,7 @@ export class WidgetListComponent implements OnInit {
 
   loadWidgets(lessonId) {
     this.service.findAllWidgetsForLesson(lessonId) 
-      .then(widgets => this.widgets = widgets)
+      .then(widgets => this.widgets = widgets.sort((widget1, widget2) => widget1.widgetOrder > widget2.widgetOrder))
   }
 
   ngOnInit() {

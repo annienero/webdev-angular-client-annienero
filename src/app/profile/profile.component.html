@@ -43,7 +43,7 @@
                         </div>
                 </div>
                 <div>
-                    <a routerLink="/admin" ng-show="user.role == admin">Admin Page</a>
+                    <a routerLink="/admin" *ngIf="user.role !== admin">Admin Page</a>
                     <h3>Your Sections</h3>
                     <ul class="list-group">
                         <li *ngFor="let enrollment of enrollments" class="list-group-item">

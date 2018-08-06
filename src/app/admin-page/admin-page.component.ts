@@ -48,6 +48,7 @@ editSection(sectionId) {
 }
 
 updateSection() {
+  this.editing = false
   const sectionObj = {
     sectionName: this.sectionName,
     seats: this.seats,
