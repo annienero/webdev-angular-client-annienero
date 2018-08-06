@@ -5,6 +5,9 @@
     </head>
     <body>
         <div class="container">
+                <div><a routerLink="/home">Home</a></div>
+                <a routerLink="/admin" *ngIf="user.role !== admin">Admin Page</a>
+
             <h1>Profile</h1>
                 <div class="form-group row">
                     <label for="username" class="col-sm-2 col-lg-2 col-md-2 col-form-label">Username</label>
@@ -43,7 +46,6 @@
                         </div>
                 </div>
                 <div>
-                    <a routerLink="/admin" *ngIf="user.role !== admin">Admin Page</a>
                     <h3>Your Sections</h3>
                     <ul class="list-group">
                         <li *ngFor="let enrollment of enrollments" class="list-group-item">
