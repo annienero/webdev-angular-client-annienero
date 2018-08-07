@@ -5,12 +5,12 @@ import { Injectable } from '@angular/core';
 })
 export class QuizServiceClient {
     findAllQuizes() {
-        return fetch("http://localhost:8080/api/quiz")
+        return fetch("http://localhost:3000/api/quiz")
             .then(response => response.json())
     }
 
     findQuizById(quizId) {
-        return fetch("http://localhost:8080/api/quiz/" + quizId)
+        return fetch("http://localhost:3000/api/quiz/" + quizId)
         .then(response => response.json())
     }
 }

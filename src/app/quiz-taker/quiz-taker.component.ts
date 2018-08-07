@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '../../../node_modules/@angular/router';
 import { QuizServiceClient } from '../services/quiz.service.client';
+import { Quiz } from '../models/quiz.model.client';
 
 @Component({
   selector: 'app-quiz-taker',
@@ -14,9 +15,10 @@ export class QuizTakerComponent implements OnInit {
   }
 
   quizId = ''
+  quiz: Quiz = new Quiz()
   ngOnInit() {
     this.service.findQuizById(this.quizId)
-    .then(quiz => alert(quiz))
+    .then(quiz => this.quiz = quiz)
   }
 
 }

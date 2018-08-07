@@ -23,7 +23,6 @@ import { RegisterComponent } from './register/register.component'
 import { HttpModule } from '@angular/http';
 import { ProfileComponent } from './profile/profile.component';
 import { SectionListComponent } from './section-list/section-list.component';
-import { SectionAdminComponent } from './section-admin/section-admin.component';
 import { SectionServiceClient } from './services/section.service.client';
 import { AdminPageComponent } from './admin-page/admin-page.component';
 import { QuizListComponent } from './quiz-list/quiz-list.component';
@@ -42,7 +41,6 @@ import { QuizTakerComponent } from './quiz-taker/quiz-taker.component';
     RegisterComponent,
     ProfileComponent,
     SectionListComponent,
-    SectionAdminComponent,
     AdminPageComponent,
     QuizListComponent,
     QuizTakerComponent
