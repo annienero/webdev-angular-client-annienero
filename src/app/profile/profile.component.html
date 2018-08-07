@@ -6,7 +6,7 @@
     <body>
         <div class="container">
                 <div><a routerLink="/home">Home</a></div>
-                <a routerLink="/admin" *ngIf="user.role !== 'admin'">Admin Page</a>
+                <a routerLink="/admin" *ngIf="user.role == 'admin'">Admin Page</a>
 
             <h1>Profile</h1>
                 <div class="form-group row">
