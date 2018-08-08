@@ -10,7 +10,7 @@ import { Quiz } from '../models/quiz.model.client';
 })
 export class QuizTakerComponent implements OnInit {
 
-  constructor(private service: QuizServiceClient, private activatedRoute: ActivatedRoute) { 
+  constructor(private service: QuizServiceClient, private activatedRoute: ActivatedRoute) {
     this.activatedRoute.params.subscribe(params => this.quizId = params['quizId'])
   }
 
@@ -18,7 +18,12 @@ export class QuizTakerComponent implements OnInit {
   quiz: Quiz = new Quiz()
   ngOnInit() {
     this.service.findQuizById(this.quizId)
-    .then(quiz => this.quiz = quiz)
+      .then(quiz => this.quiz = quiz)
+  }
+
+  submitQuiz() {
+    console.log(this.quiz)
+    this.service.submitQuiz(this.quiz)
   }
 
 }
