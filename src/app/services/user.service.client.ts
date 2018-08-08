@@ -10,7 +10,7 @@ export class UserServiceClient {
             username: username,
             password: password
         }
-        return fetch('http://localhost:3000/api/login', { //TODO local
+        return fetch('http://localhost:3002/api/login', { //TODO local
             body: JSON.stringify(userObj),
             credentials: 'include',
             method: 'post',
@@ -25,7 +25,7 @@ export class UserServiceClient {
             username: username,
             password: password
         }
-        return fetch('http://localhost:3000/api/user', { //TODO local
+        return fetch('http://localhost:3002/api/user', { //TODO local
             body: JSON.stringify(userObj),
             method: 'post',
             credentials: 'include',
@@ -36,26 +36,26 @@ export class UserServiceClient {
     }
 
     profile() {
-        return fetch('http://localhost:3000/api/profile', {
+        return fetch('http://localhost:3002/api/profile', {
             credentials: 'include',
         }) //TODO local
         .then(response => response.json())
     }
 
     findUserById(userId) {
-        return fetch('http://localhost:3000/api/user/' + userId) //TODO local
+        return fetch('http://localhost:3002/api/user/' + userId) //TODO local
         .then(response => response.json())
     }
 
     logout() {
-        return fetch('http://localhost:3000/api/logout', {
+        return fetch('http://localhost:3002/api/logout', {
             method: 'post',
             credentials: 'include'
         }) //TODO local
     }
 
     updateUser(user) {
-        return fetch('http://localhost:3000/api/profile', {
+        return fetch('http://localhost:3002/api/profile', {
             method: 'put',
             credentials: 'include',
             body: JSON.stringify(user),

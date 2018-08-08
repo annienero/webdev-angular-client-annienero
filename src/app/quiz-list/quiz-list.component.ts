@@ -9,12 +9,12 @@ import { Quiz } from '../models/quiz.model.client';
 })
 export class QuizListComponent implements OnInit {
 
-  quizes: Quiz[] = []
+  quizzes: Quiz[] = []
   constructor(private service: QuizServiceClient) { }
 
   ngOnInit() {
-    this.service.findAllQuizes()
-      .then(quizes => this.quizes = quizes)
+    this.service.findAllQuizzes()
+      .then(quizzes => this.quizzes = quizzes)
   }
 
 }
