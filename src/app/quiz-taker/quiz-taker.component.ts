@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '../../../node_modules/@angular/router';
+import { ActivatedRoute, Router } from '../../../node_modules/@angular/router';
 import { QuizServiceClient } from '../services/quiz.service.client';
 import { Quiz } from '../models/quiz.model.client';
 
@@ -10,7 +10,7 @@ import { Quiz } from '../models/quiz.model.client';
 })
 export class QuizTakerComponent implements OnInit {
 
-  constructor(private service: QuizServiceClient, private activatedRoute: ActivatedRoute) {
+  constructor(private service: QuizServiceClient, private activatedRoute: ActivatedRoute, private router: Router) {
     this.activatedRoute.params.subscribe(params => this.quizId = params['quizId'])
   }
 
@@ -24,6 +24,10 @@ export class QuizTakerComponent implements OnInit {
   submitQuiz() {
     console.log(this.quiz)
     this.service.submitQuiz(this.quiz)
+  }
+
+  cancel() {
+    this.router.navigate(['quizzes'])
   }
 
 }
