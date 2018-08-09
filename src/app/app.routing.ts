@@ -22,6 +22,8 @@ const appRoutes: Routes = [
     {path: 'quizzes', component: QuizListComponent},
     {path: 'quiz/:quizId', component: QuizTakerComponent},
     {path: 'quiz/:quizId/submissions', component: QuizSubmissionsComponent},
+    {path: 'quiz/:quizId/submission/:submissionId', component: QuizAnswersComponent},
+    
     {path: 'course/:courseId/module/:moduleId', component: CourseViewerComponent},
     {path: 'course/:courseId/module/:moduleId/lesson/:lessonId', component: CourseViewerComponent},
     {path: '**', component: CourseManagerComponent}
