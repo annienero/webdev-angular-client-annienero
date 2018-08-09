@@ -5,8 +5,8 @@
     <body>
         <h5>{{question.description}}</h5>
         <ul class="list-group">
-            <li [ngClass]="{'active': choice.value === selectedChoiceValue}" class="list-group-item" *ngFor="let choice of question.choices">
-                <label><input (click)="selected(choice.value)" name="question._id" type="radio"> {{choice.value}}. {{choice.text}}</label>
+            <li [ngClass]="{'active': choice.choiceValue === selectedChoiceValue}" class="list-group-item" *ngFor="let choice of question.choices">
+                <label><input (click)="selected(choice.choiceValue)" name="question._id" type="radio"> {{choice.choiceValue}}. {{choice.text}}</label>
             </li>
         </ul>
     </body>

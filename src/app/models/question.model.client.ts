@@ -6,7 +6,7 @@ export class Question {
     blanks: [String]
     choices: [{
         text: String,
-        value: String
+        choiceValue: String
     }]
     essayAnswer: String
     fillBlanksAnswers: {}
