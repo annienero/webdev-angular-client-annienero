@@ -32,5 +32,12 @@ export class QuizServiceClient {
         })
         .then(response => response.json())
     }
+
+    getSubmission(quizId, submissionId) {
+        return fetch("http://localhost:3002/api/quiz/" + quizId + "/submission/" + submissionId, {
+            credentials: 'include'
+        })
+        .then(response => response.json())
+    }
 }
 

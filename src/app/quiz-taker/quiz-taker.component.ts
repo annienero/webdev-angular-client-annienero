@@ -22,8 +22,8 @@ export class QuizTakerComponent implements OnInit {
   }
 
   submitQuiz() {
-    console.log(this.quiz)
     this.service.submitQuiz(this.quiz)
+    this.router.navigate(['quizzes'])
   }
 
   cancel() {
