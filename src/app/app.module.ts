@@ -36,6 +36,7 @@ import { QuizAnswersComponent } from './quiz-answers/quiz-answers.component';
 import { TrueFalseAnswerComponent } from './true-false-answer/true-false-answer.component';
 import { EssayAnswerComponent } from './essay-answer/essay-answer.component';
 import { FillBlanksAnswerComponent } from './fill-blanks-answer/fill-blanks-answer.component';
+import { MultipleChoiceAnswerComponent } from './multiple-choice-answer/multiple-choice-answer.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +62,8 @@ import { FillBlanksAnswerComponent } from './fill-blanks-answer/fill-blanks-answ
     QuizAnswersComponent,
     TrueFalseAnswerComponent,
     EssayAnswerComponent,
-    FillBlanksAnswerComponent
+    FillBlanksAnswerComponent,
+    MultipleChoiceAnswerComponent
   ],
   imports: [
     BrowserModule,
