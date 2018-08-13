@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
       alert("Enter a username")
       return
     }
-    if (password == null) {
+    else if (password == null) {
       alert("Enter a password")
       return
     }
