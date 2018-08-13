@@ -12,9 +12,9 @@
                   </h4>
                   <div [ngSwitch]="answer.questionType">
                       <app-true-false-answer [answer]="answer" *ngSwitchCase="'TRUE_FALSE'"></app-true-false-answer>
-                      <!-- <app-essay-question [question]="question" *ngSwitchCase="'ESSAY'"></app-essay-question>
-                      <app-fill-blanks-question [question]="question" *ngSwitchCase="'FILL_BLANKS'"></app-fill-blanks-question>
-                      <app-multiple-choice-question [question]="question" *ngSwitchCase="'CHOICE'"></app-multiple-choice-question> -->
+                      <app-essay-answer [answer]="answer" *ngSwitchCase="'ESSAY'"></app-essay-answer>
+                      <app-fill-blanks-answer [answer]="answer" *ngSwitchCase="'FILL_BLANKS'"></app-fill-blanks-answer>
+                      <app-multiple-choice-answer [answer]="answer" *ngSwitchCase="'CHOICE'"></app-multiple-choice-answer>
                   </div>
               </li>
           </ul>
