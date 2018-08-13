@@ -34,6 +34,7 @@ import { EssayQuestionComponent } from './essay-question/essay-question.componen
 import { QuizSubmissionsComponent } from './quiz-submissions/quiz-submissions.component';
 import { QuizAnswersComponent } from './quiz-answers/quiz-answers.component';
 import { TrueFalseAnswerComponent } from './true-false-answer/true-false-answer.component';
+import { EssayAnswerComponent } from './essay-answer/essay-answer.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,8 @@ import { TrueFalseAnswerComponent } from './true-false-answer/true-false-answer.
     EssayQuestionComponent,
     QuizSubmissionsComponent,
     QuizAnswersComponent,
-    TrueFalseAnswerComponent
+    TrueFalseAnswerComponent,
+    EssayAnswerComponent
   ],
   imports: [
     BrowserModule,
