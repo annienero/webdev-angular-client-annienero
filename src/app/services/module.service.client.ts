@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class ModuleServiceClient {
     findAllModulesForCourse(courseId) {
-        return fetch("http://localhost:8080/api/course/" + courseId + "/module")
+        return fetch("https://cs4550-summer2-2018-annienero.herokuapp.com/api/course/" + courseId + "/module")
             .then(response => response.json())
     }
 }

@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class WidgetServiceClient {
     findAllWidgetsForLesson(lessonId) {
-        return fetch("http://localhost:8080/api/lesson/" + lessonId + "/widget")
+        return fetch("https://cs4550-summer2-2018-annienero.herokuapp.com/api/lesson/" + lessonId + "/widget")
             .then(response => response.json())
     }
 }
