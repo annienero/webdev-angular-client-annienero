@@ -1,0 +1,12 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../../assets/dist/css/bootstrap.css" />
+    </head>
+    <body>
+      <h5>{{answer.description}}</h5>
+      <li class="list-group-item" *ngFor="let choice of answer.choices">
+          {{choice.choiceValue}}. {{choice.text}}
+      </li>
+      <p id="answer">Your answer: {{answer.multipleChoiceAnswer}}</p>
+    </body>
+</html>
