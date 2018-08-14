@@ -9,7 +9,7 @@ export class Question {
         choiceValue: String
     }]
     essayAnswer: String
-    fillBlanksAnswers: {}
+    fillBlanksAnswers: Object
     trueFalseAnswer: Boolean
     multipleChoiceAnswer: String
 }
