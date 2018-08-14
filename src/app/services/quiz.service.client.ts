@@ -5,17 +5,17 @@ import { Injectable } from '@angular/core';
 })
 export class QuizServiceClient {
     findAllQuizzes() {
-        return fetch("http://localhost:3002/api/quiz")
+        return fetch("https://webdev-server-node-nero.herokuapp.com/api/quiz")
             .then(response => response.json())
     }
 
     findQuizById(quizId) {
-        return fetch("http://localhost:3002/api/quiz/" + quizId)
+        return fetch("https://webdev-server-node-nero.herokuapp.com/api/quiz/" + quizId)
         .then(response => response.json())
     }
 
     submitQuiz(quiz) {
-        return fetch("http://localhost:3002/api/quiz/" + quiz._id + "/submission", {
+        return fetch("https://webdev-server-node-nero.herokuapp.com/api/quiz/" + quiz._id + "/submission", {
             method: 'post',
             body: JSON.stringify(quiz),
             credentials: 'include',
@@ -27,14 +27,14 @@ export class QuizServiceClient {
     }
 
     getSubmissions(quizId) {
-        return fetch("http://localhost:3002/api/quiz/" + quizId + "/submission", {
+        return fetch("https://webdev-server-node-nero.herokuapp.com/api/quiz/" + quizId + "/submission", {
             credentials: 'include'
         })
         .then(response => response.json())
     }
 
     getSubmission(quizId, submissionId) {
-        return fetch("http://localhost:3002/api/quiz/" + quizId + "/submission/" + submissionId, {
+        return fetch("https://webdev-server-node-nero.herokuapp.com/api/quiz/" + quizId + "/submission/" + submissionId, {
             credentials: 'include'
         })
         .then(response => response.json())

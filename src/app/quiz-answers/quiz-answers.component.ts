@@ -15,10 +15,14 @@ export class QuizAnswersComponent implements OnInit {
   }
 
   submission: Submission = new Submission()
+  title
 
   loadSubmission(params) {
     this.service.getSubmission(params['quizId'], params['submissionId'])
-    .then(submission => this.submission = submission)
+    .then(submission => {
+      this.submission = submission
+      this.title = submission.title
+    })
    }
 
   ngOnInit() {

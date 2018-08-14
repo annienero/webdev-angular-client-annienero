@@ -1,7 +1,7 @@
 import { Question } from './question.model.client'
 
 export class Quiz {
-    _id: number
-    title: string
+    _id: Number
+    title: String
     questions: Question[]
 }
